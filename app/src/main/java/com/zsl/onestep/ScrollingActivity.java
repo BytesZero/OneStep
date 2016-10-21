@@ -94,7 +94,7 @@ public class ScrollingActivity extends AppCompatActivity {
                     tv_message.append(sharedText + "\n");
                 }
                 Uri imageUri = intent.getParcelableExtra(Intent.EXTRA_STREAM);
-                tv_message.append(imageUri.getPath() + "\n");
+                tv_message.append(UriToFilePath(imageUri) + "\n");
 
             }
         } else if (Intent.ACTION_SEND_MULTIPLE.equals(action) && type != null) {//多张图片
